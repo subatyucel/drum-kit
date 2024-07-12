@@ -1,1 +1,3 @@
-# drum-kit
+- This is a project is for practicing JavaScript eventlisteners with @angelabauer lessons.
+- You can click on the insturment to make sounds of the insturment.
+- In the future i will add some more eventlisteners to make it playable by the keyboard also.
