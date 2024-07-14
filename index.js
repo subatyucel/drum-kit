@@ -5,12 +5,14 @@ for (button of buttons) {
   button.addEventListener("click", function () {
     let buttonText = this.textContent;
     makeSound(buttonText);
+    animateButton(buttonText);
   });
 }
 
 //KEYBOARD PRESS
 document.addEventListener("keydown", function (event) {
   makeSound(event.key);
+  animateButton(event.key);
 });
 
 //FUNCTION FOR MAKE SOUNDS
@@ -54,4 +56,15 @@ function makeSound(key) {
     default:
       console.log(buttonText);
   }
+}
+
+//FUNCTION FOR ANIMATION
+function animateButton(currentKey) {
+  let activeButton = document.querySelector(`.${currentKey}`);
+
+  activeButton.classList.toggle("pressed");
+
+  setTimeout(function () {
+    activeButton.classList.toggle("pressed");
+  }, 100);
 }
